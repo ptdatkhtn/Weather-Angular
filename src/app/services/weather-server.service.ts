@@ -19,4 +19,7 @@ export class WeatherServerService {
   searchWeatherData(cityName: string): Observable<any> {
     return this._http.get(`http://openweathermap.org/data/2.5/weather?q=${cityName}&appid=b6907d289e10d714a6e88b30761fae22`);
   }
+  clearWeatherData() {
+    WEATHER_ITEMS.splice(0);
+  }
 }
